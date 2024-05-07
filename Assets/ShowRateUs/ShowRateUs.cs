@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+#if UNITY_IOS
+using UnityEngine.iOS;
+#endif
 public class ShowRateUs : MonoBehaviour
 {
     public GameObject RateUsObj;
@@ -20,6 +23,8 @@ public class ShowRateUs : MonoBehaviour
     }
     private void RateUs()
     {
-
+#if UNITY_IOS
+        Device.RequestStoreReview();
+#endif
     }
 }
