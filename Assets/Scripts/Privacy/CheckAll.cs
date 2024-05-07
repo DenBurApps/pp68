@@ -15,7 +15,7 @@ public class CheckAll : MonoBehaviour
     private const string sceneName = "SampleScene";
     private const string privacyName = "Privacy";
 
-    private void Awake()
+    private void Start()
     {
         StartLoading();
     }
